@@ -107,7 +107,7 @@ int main(void)
 	printf("请输入需要加入计算的文件名：");
 	scanf("%s",&finName) ;
 #if 1	
-	printf("请选择%s中数字间的分隔符:\n1. 空格 \n2英文逗号 \n3: | \n",finName);
+	printf("请选择%s中数字间的分隔符:\n1. 空格 \n2英文逗号 \n3: | \n======>:",finName);
 	scanf("%d",&splitSymbolMode) ;
 	while( splitSymbolMode != 1 && splitSymbolMode != 2 && splitSymbolMode != 3)
 	{
@@ -182,6 +182,8 @@ int main(void)
 		 	sprintf(cmd,"关闭%s文件失败",foutName);
 			perror(cmd);
 	 	}
+	 	printf("\n请按Ctrl+C退出\n");
+		scanf("%s",&cmd);
 	}
 	else
 	{
